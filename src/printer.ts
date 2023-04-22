@@ -1884,10 +1884,10 @@ export class PugPrinter {
 
   private call(token: CallToken): string {
     let result: string = `${this.computedIndent}+${token.val}`;
-    let args: string | null = token.args;
+    const args: string | null = token.args;
     if (args) {
-      args = args.trim();
-      args = args.replace(/\s\s+/g, ' ');
+      // args = args.trim();
+      // args = args.replace(/\s\s+/g, ' ');
       result += `(${args})`;
     }
     this.currentLineLength += result.length;
